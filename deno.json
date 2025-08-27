@@ -1,9 +1,17 @@
 {
   "tasks": {
+    "serve": "deno run --allow-env --allow-read --allow-net ./app.ts",
     "createTables": "deno run --allow-env --allow-read --allow-net ./db/createTables.ts"
   },
   "imports": {
     "@ariel/database-chores": "jsr:@ariel/database-chores@^1.0.3",
+    "@std/path": "jsr:@std/path@^1.1.2",
+    "@types/express": "npm:@types/express@^5.0.3",
+    "bcryptjs": "npm:bcryptjs@^3.0.2",
+    "ejs": "npm:ejs@^3.1.10",
+    "express": "npm:express@^5.1.0",
+    "express-async-handler": "npm:express-async-handler@^1.2.0",
+    "express-validator": "npm:express-validator@^7.2.1",
     "pg": "npm:pg@^8.16.3"
   }
 }

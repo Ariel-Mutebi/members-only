@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | Members Only</title>
+  </head>
+  <body>
+    <%- include("./partials/errorList.ejs") %>
+    <form method="post">
+      <label for="first-name">First name</label>
+      <input
+        type="text"
+        id="first-name"
+        name="firstName"
+        value="<%= locals.previous?.firstName %>"
+      />
+      <label for="last-name">Last name</label>
+      <input
+        type="text"
+        id="last-name"
+        name="lastName"
+        value="<%= locals.previous?.lastName %>"
+      />
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        value="<%= locals.previous?.username %>"
+      />
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        value="<% locals.previous?.password %>"
+      />
+      <label for="confirm-password">Confirm password</label>
+      <input
+        type="password"
+        id="confirm-password"
+        name="confirmatoryPassword"
+        value="<%= locals.previous?.confirmatoryPassword %>"
+      />
+      <button type="submit">Sign up</button>
+    </form>
+  </body>
+</html>
