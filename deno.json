@@ -1,17 +1,24 @@
 {
   "tasks": {
     "serve": "deno run --allow-env --allow-read --allow-net ./app.ts",
-    "createTables": "deno run --allow-env --allow-read --allow-net ./db/createTables.ts"
+    "createTables": "deno run --allow-env --allow-read --allow-net ./db/createTables.ts",
+    "tellMeASecret": "deno run ./auth/generateSecret.ts"
   },
   "imports": {
     "@ariel/database-chores": "jsr:@ariel/database-chores@^1.0.3",
     "@std/path": "jsr:@std/path@^1.1.2",
     "@types/express": "npm:@types/express@^5.0.3",
+    "@types/express-session": "npm:@types/express-session@^1.18.2",
+    "@types/passport": "npm:@types/passport@^1.0.17",
+    "@types/passport-local": "npm:@types/passport-local@^1.0.38",
     "bcryptjs": "npm:bcryptjs@^3.0.2",
     "ejs": "npm:ejs@^3.1.10",
     "express": "npm:express@^5.1.0",
     "express-async-handler": "npm:express-async-handler@^1.2.0",
+    "express-session": "npm:express-session@^1.18.2",
     "express-validator": "npm:express-validator@^7.2.1",
+    "passport": "npm:passport@^0.7.0",
+    "passport-local": "npm:passport-local@^1.0.0",
     "pg": "npm:pg@^8.16.3"
   }
 }

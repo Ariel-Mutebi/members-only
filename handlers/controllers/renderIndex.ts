@@ -1,6 +1,7 @@
 import type { Request, Response } from "npm:express";
 
-const renderIndex = (req: Request, res: Response) => {
+const renderIndex = (_req: Request, res: Response) => {
+  console.log(res.locals);
   res.render("index");
 };
 

@@ -1,4 +1,5 @@
 import { body } from "express-validator";
+import usernameIsInUse from "../../db/usernameIsInUse.ts";
 
 const minMaxOptions = { min: 1, max: 255 };
 const lengthError = "must be between 1 and 255 characters.";
@@ -15,7 +16,10 @@ const validateUser = [
   body("username")
     .trim()
     .isLength(minMaxOptions)
-    .withMessage("Username " + lengthError),
+    .withMessage("Username " + lengthError)
+    .custom(async(value) => {
+      if(await usernameIsInUse(value)) throw new Error("That username is in use.");
+    }),
   body("password")
     .trim()
     .isLength(minMaxOptions)

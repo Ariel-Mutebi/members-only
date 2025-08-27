@@ -1,5 +1,5 @@
 create table if not exists users(
-  user_id serial primary key,
+  id serial primary key,
   first_name varchar(255) not null,
   last_name varchar(255) not null,
   username varchar(255) not null,
@@ -13,5 +13,5 @@ create table if not exists messages(
   title varchar(255) not null,
   body text not null,
   posted_by integer not null,
-  foreign key(posted_by) references users(user_id) on delete cascade
+  foreign key(posted_by) references users(id) on delete cascade
 );
