@@ -1,5 +1,9 @@
 {
   "tasks": {
-    "dev": "deno run --watch main.ts"
+    "createTables": "deno run --allow-env --allow-read --allow-net ./db/createTables.ts"
+  },
+  "imports": {
+    "@ariel/database-chores": "jsr:@ariel/database-chores@^1.0.3",
+    "pg": "npm:pg@^8.16.3"
   }
 }
