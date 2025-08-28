@@ -11,13 +11,13 @@ const authStrategy = new Strategy(async(username, password, done) => {
     
     const user = await selectUserByUsername(username);
 
-    if(!await compare(password, user.password)) {
+    if(!await compare(password, user.accountPassword)) {
       return done(null, false, { message: "Incorrect password." });
     }
 
     return done(null, user);
   } catch (error) {
-    console.error(error);
+    return done(error);
   }
 });
 
