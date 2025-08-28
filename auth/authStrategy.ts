@@ -11,7 +11,7 @@ const authStrategy = new Strategy(async(username, password, done) => {
     
     const user = await selectUserByUsername(username);
 
-    if(!await compare(password, user.accountPassword)) {
+    if(!await compare(password, user.password)) {
       return done(null, false, { message: "Incorrect password." });
     }
 

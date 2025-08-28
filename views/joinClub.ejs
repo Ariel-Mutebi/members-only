@@ -6,9 +6,17 @@
     <title>Join the club | Members Only</title>
   </head>
   <body>
-    <h1>Join the club!</h1>
-    <p>Club members are able to see when and by whom a message was posted.</p>
-    <%- include("./partials/errorList.ejs") %>
+    <section>
+      <h1>Join the club!</h1>
+      <p>Club members are able to:</p>
+      <ul>
+        <li>see when and by whom a message was posted.</li>
+        <li>post their own messages.</li>
+      </ul>
+    </section>
+
+    <section><%- include("./partials/errorList.ejs") %></section>
+
     <form method="post">
       <label for="passcode">Type: "I'd like to join the club."</label>
       <input

@@ -7,7 +7,7 @@ async function insertUser(user: User) {
   const hashedPassword = await hash(password, 10);
 
   await pool.query(
-    `INSERT INTO users(first_name, last_name, username, account_password, membership_status)
+    `INSERT INTO users(first_name, last_name, username, password, membership_status)
     VALUES ($1, $2, $3, $4, 'non-member');`,
     [firstName, lastName, username, hashedPassword]
   );

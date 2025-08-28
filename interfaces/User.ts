@@ -3,7 +3,7 @@ interface User { // not to be confused with User Interface, ha ha! Yes, I'm very
   firstName: string;
   lastName: string;
   username: string;
-  accountPassword: string;
+  password: string;
 };
 
 export default User;
