@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join the club | Members Only</title>
+  </head>
+  <body>
+    <h1>Join the club!</h1>
+    <p>Club members are able to see when and by whom a message was posted.</p>
+    <%- include("./partials/errorList.ejs") %>
+    <form method="post">
+      <label for="passcode">Type: "I'd like to join the club."</label>
+      <input
+        type="text"
+        name="passcode"
+        id="passcode"
+        value="<%= locals.previous?.passcode %>"
+      />
+      <button type="submit">Join</button>
+    </form>
+  </body>
+</html>

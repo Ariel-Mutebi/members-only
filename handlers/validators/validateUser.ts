@@ -26,10 +26,8 @@ const validateUser = [
     .withMessage("Password"  + lengthError),
   body("confirmatoryPassword")
     .trim()
-    .custom((value, { req }) => {
-      if(value !== req.body.password) throw new Error("Passwords do not match.");
-      return true;
-    })
+    .custom((value, { req }) => value === req.body.password)
+    .withMessage("Passwords do not match.")
 ];
 
 export default validateUser;
