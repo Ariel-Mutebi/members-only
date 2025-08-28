@@ -11,9 +11,27 @@
       <a href="/sign-up">Sign Up</a>
       <a href="/login">Login</a>
       <a href="/join-club">Join our club</a>
-      <% if(locals.user?.membershipStatus === "member") { %>
+      <% const isMember = locals.user?.membershipStatus === "member"; %> <%
+      if(isMember) { %>
       <a href="/new-message">New message</a>
       <% } %>
     </nav>
+
+    <% if(locals.messages) { %>
+    <main>
+      <ul>
+        <% messages.forEach((message) => { %>
+        <li>
+          <% if(isMember) { %>
+          <h2>
+            <%= user.firstName %> <%= user.lastName %> (@<%= user.username %>)
+          </h2>
+          <% } %>
+          <p><%= message.body %></p>
+        </li>
+        <% }) %>
+      </ul>
+    </main>
+    <% } %>
   </body>
 </html>

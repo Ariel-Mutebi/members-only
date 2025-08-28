@@ -5,10 +5,11 @@ import renderError from "../handlers/forErrors/renderError.ts";
 import joinClubRouter from "./joinClubRouter.ts";
 import loginRouter from "./loginRouter.ts";
 import newMessageRouter from "./newMessageRouter.ts";
+import expressAsyncHandler from "express-async-handler";
 
 const indexRouter = Router();
 
-indexRouter.get("/", renderIndex);
+indexRouter.get("/", expressAsyncHandler(renderIndex));
 indexRouter.use("/sign-up", signUpRouter);
 indexRouter.use("/join-club", joinClubRouter);
 indexRouter.use("/login", loginRouter);
