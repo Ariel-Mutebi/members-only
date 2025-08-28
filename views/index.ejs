@@ -24,7 +24,8 @@
         <li>
           <% if(isMember) { %>
           <h2>
-            <%= user.firstName %> <%= user.lastName %> (@<%= user.username %>)
+            <%= message.author.firstName %> <%= message.author.lastName %> (@<%=
+            message.author.username %>)
           </h2>
           <% } %>
           <p><%= message.body %></p>

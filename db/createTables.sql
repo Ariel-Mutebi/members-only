@@ -12,6 +12,6 @@ create table if not exists messages(
   time_posted timestamptz default current_timestamp,
   title varchar(255) not null,
   body text not null,
-  posted_by integer not null,
-  foreign key(posted_by) references users(id) on delete cascade
+  author integer not null,
+  foreign key(author) references users(id) on delete cascade
 );

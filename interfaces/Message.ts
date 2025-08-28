@@ -1,9 +1,11 @@
+import User from "./User.ts";
+
 interface Message {
   id: number;
   timePosted: string;
   title: string;
   body: string;
-  postedBy: number;
+  author: number | User;
 }
 
 export default Message;

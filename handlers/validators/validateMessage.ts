@@ -9,7 +9,7 @@ const validateMessage = [
     .trim()
     .isLength({ min: 1 })
     .withMessage("Please write a message."),
-  body("postedBy")
+  body("author")
     .isInt()
     .withMessage("You must be logged in to post a message.")
 ];
