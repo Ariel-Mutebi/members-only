@@ -11,6 +11,7 @@ const app = express();
 const PORT = Number(Deno.env.get("PORT"));
 
 app.set("view engine", "ejs");
+app.use(express.static('public'));
 app.use(session(sessionOptions));
 app.use(passport.session());
 app.use(express.urlencoded({ extended: true }));

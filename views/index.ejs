@@ -27,6 +27,7 @@
             <%= message.author.firstName %> <%= message.author.lastName %> (@<%=
             message.author.username %>)
           </h2>
+          <time datetime="<%= message.timePosted %>"></time>
           <% } %>
           <p><%= message.body %></p>
         </li>
@@ -35,4 +36,6 @@
     </main>
     <% } %>
   </body>
+
+  <script src="/index.js"></script>
 </html>
