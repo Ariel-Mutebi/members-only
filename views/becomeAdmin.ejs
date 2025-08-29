@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Become an admin</title>
+  </head>
+  <body>
+    <section>
+      <h1>Become an admin</h1>
+      <p>An admin can:</p>
+      <ul>
+        <li>Delete messages.</li>
+      </ul>
+      <p>
+        And to have that privilege, you must prove yourself by finding the admin
+        passcode in the
+        <a href="github.com/Ariel-Mutebi/members-only">Github repo</a>.
+      </p>
+    </section>
+
+    <section>
+      <%- include("./partials/errorList.ejs") %>
+      <form method="post">
+        <label for="passcode">Type the admin passcode:</label>
+        <input type="text" name="passcode" id="passcode" />
+        <input type="hidden" name="id" value="<%= locals.user?.id %>" />
+        <input
+          type="hidden"
+          name="membershipStatus"
+          value="<%= locals.user?.membershipStatus %>"
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </body>
+</html>

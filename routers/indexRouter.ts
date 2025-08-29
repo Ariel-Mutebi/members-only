@@ -6,6 +6,7 @@ import joinClubRouter from "./joinClubRouter.ts";
 import loginRouter from "./loginRouter.ts";
 import newMessageRouter from "./newMessageRouter.ts";
 import expressAsyncHandler from "express-async-handler";
+import becomeAdminRouter from "./becomeAdminRouter.ts";
 
 const indexRouter = Router();
 
@@ -14,6 +15,7 @@ indexRouter.use("/sign-up", signUpRouter);
 indexRouter.use("/join-club", joinClubRouter);
 indexRouter.use("/login", loginRouter);
 indexRouter.use("/new-message", newMessageRouter);
+indexRouter.use("/become-admin", becomeAdminRouter);
 indexRouter.use(renderError);
 
 export default indexRouter;

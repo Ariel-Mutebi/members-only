@@ -1,10 +1,10 @@
 import { Router } from "express";
-import renderLogin from "../handlers/controllers/renderLogin.ts";
 import authenticateWithRootRedirect from "../handlers/authenticators/authenticateWithRootRedirect.ts";
+import simpleRender from "../handlers/controllers/simpleRender.ts";
 
 const loginRouter = Router();
 
-loginRouter.get("/", renderLogin);
+loginRouter.get("/", simpleRender("login"));
 loginRouter.post("/", authenticateWithRootRedirect);
 
 export default loginRouter;

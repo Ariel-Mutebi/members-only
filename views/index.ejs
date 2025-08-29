@@ -11,7 +11,8 @@
       <a href="/sign-up">Sign Up</a>
       <a href="/login">Login</a>
       <a href="/join-club">Join our club</a>
-      <% const isMember = locals.user?.membershipStatus === "member"; %> <%
+      <% const isAdmin = locals.user?.membershipStatus === "admin"; %> <% const
+      isMember = locals.user?.membershipStatus === "member" || isAdmin; %> <%
       if(isMember) { %>
       <a href="/new-message">New message</a>
       <% } %>
@@ -34,8 +35,11 @@
         <% }) %>
       </ul>
     </main>
+    <% } %> <% if(isMember) { %>
+    <footer>
+      <a href="/become-admin">Become an admin</a>
+    </footer>
     <% } %>
+    <script src="/index.js"></script>
   </body>
-
-  <script src="/index.js"></script>
 </html>

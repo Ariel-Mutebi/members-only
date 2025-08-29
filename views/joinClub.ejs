@@ -15,17 +15,19 @@
       </ul>
     </section>
 
-    <section><%- include("./partials/errorList.ejs") %></section>
-
-    <form method="post">
-      <label for="passcode">Type: "I'd like to join the club."</label>
-      <input
-        type="text"
-        name="passcode"
-        id="passcode"
-        value="<%= locals.previous?.passcode %>"
-      />
-      <button type="submit">Join</button>
-    </form>
+    <section>
+      <%- include("./partials/errorList.ejs") %>
+      <form method="post">
+        <label for="passcode">Type: "I'd like to join the club."</label>
+        <input
+          type="text"
+          name="passcode"
+          id="passcode"
+          value="<%= locals.previous?.passcode %>"
+        />
+        <input type="hidden" name="id" value="<%= req.user.id %>" />
+        <button type="submit">Join</button>
+      </form>
+    </section>
   </body>
 </html>
