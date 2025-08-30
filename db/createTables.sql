@@ -10,7 +10,6 @@ create table if not exists users(
 create table if not exists messages(
   id serial primary key,
   time_posted timestamptz default current_timestamp,
-  title varchar(255) not null,
   body text not null,
   author integer not null,
   foreign key(author) references users(id) on delete cascade
