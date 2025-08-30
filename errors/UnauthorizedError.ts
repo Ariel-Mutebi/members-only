@@ -3,7 +3,7 @@ import CustomError from "../interfaces/CustomError.ts";
 class UnauthorizedError extends Error implements CustomError {
   statusCode: number;
 
-  constructor(message: string) {
+  constructor(message = "Log in.") {
     super(message);
     this.name = "UnauthorizedError";
     this.statusCode = 401;

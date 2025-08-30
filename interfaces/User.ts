@@ -4,6 +4,7 @@ interface User { // not to be confused with User Interface, ha ha! Yes, I'm very
   lastName: string;
   username: string;
   password: string;
+  membershipStatus: string;
 };
 
 export default User;
