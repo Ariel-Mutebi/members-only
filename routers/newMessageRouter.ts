@@ -12,7 +12,7 @@ newMessageRouter.get("/", simpleRender("newMessage"));
 newMessageRouter.post("/",
   validateMessage,
   handleValidationErrors("newMessage"),
-  preventHacking,
+  preventHacking("author"),
   expressAsyncHandler(createMessage)
 );
 

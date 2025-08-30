@@ -12,7 +12,7 @@ becomeAdminRouter.get("/", simpleRender("becomeAdmin"));
 becomeAdminRouter.post("/",
   validateAdminPasscode,
   handleValidationErrors("becomeAdmin"),
-  preventHacking,
+  preventHacking(),
   expressAsyncHandler(makeUserAnAdmin)
 );
 

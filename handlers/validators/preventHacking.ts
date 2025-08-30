@@ -4,12 +4,16 @@
 // could be any integer. That hack is what this request handler is made to prevent.
 import type { RequestHandler } from "express";
 import User from "../../interfaces/User.ts";
+import UnauthorizedError from "../../errors/UnauthorizedError.ts";
 
-
-const preventHacking: RequestHandler = (req, _res, next) => {
-  // non-strict equality because the one in request body comes as a string.
-  if(req.body.id != (req.user as User)?.id) throw new Error("Log in.");
-  next();
-};
+const preventHacking: (nameOfUserIdContainingFormField?: string) => RequestHandler = (
+  (nameOfUserIdContainingFormField = "id") => (req, _res, next) => {
+    const formID = Number(req.body[nameOfUserIdContainingFormField]);
+    const deserializedID = Number((req.user as User)?.id);
+    const notBothAreFalsy = Boolean(formID || deserializedID);
+    if((formID != deserializedID) && notBothAreFalsy) throw new UnauthorizedError("Log in.");
+    next();
+  }
+);
 
 export default preventHacking;

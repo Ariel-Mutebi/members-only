@@ -12,7 +12,7 @@ joinClubRouter.get("/", simpleRender("joinClub"));
 joinClubRouter.post("/",
   validateMemberPasscode,
   handleValidationErrors("joinClub"),
-  preventHacking,
+  preventHacking(),
   expressAsyncHandler(makeUserJoinClub)
 );
 
