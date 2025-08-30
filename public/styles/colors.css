@@ -1,0 +1,45 @@
+:root{
+  --muted-white: #eef0f2;
+  --blue-lightness-0: #001233;
+  --blue-lightness-1: #001845;
+  --blue-lightness-2: #002855;
+  --blue-lightness-3: #023e7d;
+  --blue-lightness-4: #0353a4;
+  --blue-lightness-5: #0466c8;
+}
+
+.muted-white-background {
+  background-color: var(--muted-white);
+}
+
+.blue-lightness-5-background {
+  background-color: var(--blue-lightness-5);
+}
+
+.blue-lightness-4-background {
+  background-color: var(--blue-lightness-4);
+}
+
+.blue-lightness-3-background {
+  background-color: var(--blue-lightness-3);
+}
+
+.blue-lightness-2-background{
+  background-color: var(--blue-lightness-2);
+}
+
+.blue-lightness-1-background {
+  background-color: var(--blue-lightness-1);
+}
+
+.blue-lightness-0-text {
+  color: var(--blue-lightness-0);
+}
+
+.blue-lightness-1-text {
+  color: var(--blue-lightness-1);
+}
+
+.muted-white-text{
+  color: var(--muted-white);
+}

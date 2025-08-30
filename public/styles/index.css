@@ -1,0 +1,27 @@
+/* This file only concerns itself with the structure. */
+header {
+  display: grid;
+  justify-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+h1{
+  font-size: max(6vw, 3rem);
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  font-weight: 800;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+nav a {
+  flex-basis: max-content;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  font-weight: 500;
+}

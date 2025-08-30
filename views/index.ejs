@@ -4,19 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Lounge | Members Only</title>
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/fonts.css" />
+    <link rel="stylesheet" href="/styles/colors.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
   </head>
-  <body>
-    <h1>Hello, <%= locals.user?.firstName || "visitor" %>!</h1>
-    <nav>
-      <a href="/sign-up">Sign Up</a>
-      <a href="/login">Login</a>
-      <a href="/join-club">Join our club</a>
-      <% const isAdmin = locals.user?.membershipStatus === "admin"; %> <% const
-      isMember = locals.user?.membershipStatus === "member" || isAdmin; %> <%
-      if(isMember) { %>
-      <a href="/new-message">New message</a>
-      <% } %>
-    </nav>
+  <body class="muted-white-background blue-lightness-0-text">
+    <header>
+      <h1 class="playfair blue-lightness-1-text">
+        Welcome to the lounge, <%= locals.user?.firstName || "visitor" %>!
+      </h1>
+      <nav>
+        <a href="/sign-up" class="blue-lightness-5-background muted-white-text"
+          >Sign Up</a
+        >
+        <a href="/login" class="blue-lightness-4-background muted-white-text"
+          >Login</a
+        >
+        <a
+          href="/join-club"
+          class="blue-lightness-3-background muted-white-text"
+          >Join our club</a
+        >
+        <% const isAdmin = locals.user?.membershipStatus === "admin"; %> <%
+        const isMember = locals.user?.membershipStatus === "member" || isAdmin;
+        %> <% if(isMember) { %>
+        <a
+          href="/new-message"
+          class="blue-lightness-2-background muted-white-text"
+          >New message</a
+        >
+        <a
+          href="/become-admin"
+          class="blue-lightness-1-background muted-white-text"
+          >Become an admin</a
+        >
+        <% } %>
+      </nav>
+    </header>
 
     <% if(locals.messages) { %>
     <main>
@@ -40,10 +65,6 @@
         <% }) %>
       </ul>
     </main>
-    <% } %> <% if(isMember) { %>
-    <footer>
-      <a href="/become-admin">Become an admin</a>
-    </footer>
     <% } %>
     <script src="/index.js"></script>
   </body>
