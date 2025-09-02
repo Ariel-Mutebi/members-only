@@ -10,11 +10,14 @@ form {
   display: grid;
 }
 
-input {
+input, textarea{
   margin-top: 0.25rem;
   margin-bottom: 1rem;
   padding: 0.25rem;
   border-radius: 0.25rem;
+}
+
+input {
   background: #dcdcdd;
   box-shadow: inset 0.25rem 0.25rem 0.25rem #cdcdce,
     inset -0.25rem -0.25rem -0.25rem #ebebec;

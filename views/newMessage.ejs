@@ -4,15 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Message | Members Only</title>
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/fonts.css" />
+    <link rel="stylesheet" href="/styles/colors.css" />
+    <link rel="stylesheet" href="/styles/formPage.css" />
   </head>
-  <body>
-    <h1>New Message</h1>
+  <body class="blue-lightness-2-background muted-white-text">
+    <h1 class="playfair accent-green-text">New Message</h1>
     <%- include("./partials/errorList.ejs") %>
     <form method="post">
       <label for="message">Message</label>
       <textarea name="body" id="message"></textarea>
       <input type="hidden" name="author" value="<%= locals.user?.id %>" />
-      <button type="submit">Post</button>
+      <button
+        type="submit"
+        class="white-text blue-lightness-5-background blue-lightness-4-background-on-hover"
+        id="submitButton"
+      >
+        Post
+      </button>
     </form>
   </body>
 </html>
