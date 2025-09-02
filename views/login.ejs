@@ -4,16 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login | Members Only</title>
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/fonts.css" />
+    <link rel="stylesheet" href="/styles/colors.css" />
+    <link rel="stylesheet" href="/styles/signUp.css" />
   </head>
-  <body>
-    <h1>Login</h1>
+  <body class="blue-lightness-0-background muted-white-text">
+    <h1 class="playfair white-text">Login</h1>
     <%- include("./partials/errorList.ejs") %>
     <form method="post">
       <label for="username">Username</label>
       <input type="text" name="username" id="username" />
       <label for="password">Password</label>
       <input type="password" name="password" id="password" />
-      <button type="submit">Log in</button>
+      <button
+        type="submit"
+        class="blue-lightness-5-background blue-lightness-4-background-on-hover white-text"
+        id="submitButton"
+      >
+        Log in
+      </button>
     </form>
   </body>
 </html>
