@@ -35,9 +35,13 @@ article {
   margin-bottom: 1rem;
 }
 
-article h2, article time, article p{
+article > *{
   display: block;
   margin-bottom: 0.5rem;
+}
+
+article:last-child{
+  margin-bottom: 0;
 }
 
 .deleteButton{
