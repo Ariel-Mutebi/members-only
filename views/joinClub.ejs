@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Join the club | Members Only</title>
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/fonts.css" />
+    <link rel="stylesheet" href="/styles/colors.css" />
+    <link rel="stylesheet" href="/styles/formPage.css" />
   </head>
-  <body>
+  <body class="blue-lightness-1-background muted-white-text">
     <section>
-      <h1>Join the club!</h1>
+      <h1 class="playfair accent-yellow-text">Join the club!</h1>
       <p>Club members are able to:</p>
       <ul>
         <li>see when and by whom a message was posted.</li>
@@ -25,8 +29,14 @@
           id="passcode"
           value="<%= locals.previous?.passcode %>"
         />
-        <input type="hidden" name="id" value="<%= req.user.id %>" />
-        <button type="submit">Join</button>
+        <input type="hidden" name="id" value="<%= locals.user?.id %>" />
+        <button
+          type="submit"
+          class="blue-lightness-0-text accent-yellow-background saturated-accent-yellow-background-on-hover"
+          id="submitButton"
+        >
+          Join
+        </button>
       </form>
     </section>
   </body>

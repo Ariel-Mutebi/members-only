@@ -6,6 +6,8 @@
   --blue-lightness-3: #023e7d;
   --blue-lightness-4: #0353a4;
   --blue-lightness-5: #0466c8;
+  --accent-yellow: hsl(49, 87%, 79%);
+  --saturated-accent-yellow: hsl(49, 94%, 69%);
 }
 
 .muted-white-background {
@@ -36,6 +38,16 @@
   background-color: var(--blue-lightness-0);
 }
 
+.accent-yellow-background {
+  background-color: var(--accent-yellow);
+}
+
+.saturated-accent-yellow-background-on-hover:hover {
+  background-color: var(--saturated-accent-yellow);
+}
+
+/* Text classes */
+
 .blue-lightness-0-text {
   color: var(--blue-lightness-0);
 }
@@ -50,4 +62,8 @@
 
 .white-text {
   color: white;
+}
+
+.accent-yellow-text {
+  color: var(--accent-yellow);
 }
