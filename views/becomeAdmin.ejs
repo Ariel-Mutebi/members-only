@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Become an admin</title>
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/fonts.css" />
+    <link rel="stylesheet" href="/styles/colors.css" />
+    <link rel="stylesheet" href="/styles/formPage.css" />
   </head>
-  <body>
+  <body class="muted-white-background">
     <section>
-      <h1>Become an admin</h1>
+      <h1 class="playfair blue-lightness-2-text">Become an admin</h1>
       <p>An admin can:</p>
       <ul>
         <li>Delete messages.</li>
@@ -30,7 +34,13 @@
           name="membershipStatus"
           value="<%= locals.user?.membershipStatus %>"
         />
-        <button type="submit">Submit</button>
+        <button
+          type="submit"
+          id="submitButton"
+          class="muted-white-text blue-lightness-2-background blue-lightness-0-background-on-hover"
+        >
+          Submit
+        </button>
       </form>
     </section>
   </body>
