@@ -45,25 +45,28 @@
 
     <% if(locals.messages) { %>
     <main>
-      <ul>
-        <% messages.forEach((message) => { %>
-        <li>
-          <% if(isMember) { %>
-          <h2>
-            <%= message.author.firstName %> <%= message.author.lastName %> (@<%=
-            message.author.username %>)
-          </h2>
-          <time datetime="<%= message.timePosted %>"></time>
-          <% } %>
-          <p><%= message.body %></p>
-          <% if(isAdmin) { %>
-          <form action="delete-message/<%= message.id %>" method="post">
-            <button type="submit">Delete</button>
-          </form>
-          <% } %>
-        </li>
-        <% }) %>
-      </ul>
+      <% messages.forEach((message) => { %>
+      <article>
+        <% if(isMember) { %>
+        <h2>
+          <%= message.author.firstName %> <%= message.author.lastName %> (@<%=
+          message.author.username %>)
+        </h2>
+        <time datetime="<%= message.timePosted %>"></time>
+        <% } %>
+        <p><%= message.body %></p>
+        <% if(isAdmin) { %>
+        <form action="delete-message/<%= message.id %>" method="post">
+          <button
+            type="submit"
+            class="deleteButton delete-brown-background dark-delete-brown-on-hover white-text"
+          >
+            Delete
+          </button>
+        </form>
+        <% } %>
+      </article>
+      <% }) %>
     </main>
     <% } %>
     <script src="/index.js"></script>

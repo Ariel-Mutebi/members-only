@@ -25,3 +25,21 @@ nav a {
   text-decoration: none;
   font-weight: 500;
 }
+
+main, article{
+  padding: 2rem;
+}
+
+article {
+  background-color: white;
+  margin-bottom: 1rem;
+}
+
+article h2, article time, article p{
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.deleteButton{
+  padding: 0.5rem;
+}

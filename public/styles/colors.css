@@ -9,6 +9,8 @@
   --accent-yellow: #f8e79b;
   --saturated-accent-yellow: #fadf66;
   --accent-green: #bff1b2;
+  --delete-brown: #eb5e28;
+  --dark-delete-brown: #ce4813;
 }
 
 .muted-white-background {
@@ -45,6 +47,14 @@
 
 .saturated-accent-yellow-background-on-hover:hover {
   background-color: var(--saturated-accent-yellow);
+}
+
+.delete-brown-background{
+  background-color: var(--delete-brown);
+}
+
+.dark-delete-brown-on-hover:hover {
+  background-color: var(--dark-delete-brown);
 }
 
 /* Text classes */
