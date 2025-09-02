@@ -16,7 +16,7 @@
   background-color: var(--blue-lightness-5);
 }
 
-.blue-lightness-4-background {
+.blue-lightness-4-background, .blue-lightness-4-background-on-hover:hover {
   background-color: var(--blue-lightness-4);
 }
 
@@ -32,6 +32,10 @@
   background-color: var(--blue-lightness-1);
 }
 
+.blue-lightness-0-background {
+  background-color: var(--blue-lightness-0);
+}
+
 .blue-lightness-0-text {
   color: var(--blue-lightness-0);
 }
@@ -42,4 +46,8 @@
 
 .muted-white-text{
   color: var(--muted-white);
+}
+
+.white-text {
+  color: white;
 }

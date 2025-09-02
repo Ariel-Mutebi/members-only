@@ -4,9 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up | Members Only</title>
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/fonts.css" />
+    <link rel="stylesheet" href="/styles/colors.css" />
+    <link rel="stylesheet" href="/styles/signUp.css" />
   </head>
-  <body>
-    <h1>Sign up</h1>
+  <body class="blue-lightness-0-background muted-white-text">
+    <h1 class="playfair white-text">Sign up</h1>
     <%- include("./partials/errorList.ejs") %>
     <form method="post">
       <label for="first-name">First name</label>
@@ -44,7 +48,13 @@
         name="confirmatoryPassword"
         value="<%= locals.previous?.confirmatoryPassword %>"
       />
-      <button type="submit">Sign up</button>
+      <button
+        type="submit"
+        class="blue-lightness-5-background blue-lightness-4-background-on-hover white-text"
+        id="submitButton"
+      >
+        Sign up
+      </button>
     </form>
   </body>
 </html>
