@@ -8,7 +8,7 @@ import "./auth/processPassport.ts";
 import 'jsr:@std/dotenv/load';
 
 const app = express();
-const PORT = Number(Deno.env.get("PORT"));
+const PORT = Number(Deno.env.get("PORT")) || 443;
 
 app.set("view engine", "ejs");
 app.use(express.static('public'));
