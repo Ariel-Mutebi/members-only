@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "serve": "deno run --allow-env --allow-read --allow-net ./app.ts",
+    "serve": "deno run --allow-env --allow-read --allow-net ./main.ts",
     "createTables": "deno run --allow-env --allow-read --allow-net ./db/createTables.ts",
     "tellMeASecret": "deno run ./auth/generateSecret.ts",
     "bundleIndex": "deno bundle ./clientSide/index.ts > ./public/index.js"
