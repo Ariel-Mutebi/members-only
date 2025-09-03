@@ -10,7 +10,6 @@ const preventHacking: (nameOfUserIdContainingFormField?: string) => RequestHandl
   (nameOfUserIdContainingFormField = "id") => (req, _res, next) => {
     const formID = Number(req.body[nameOfUserIdContainingFormField]);
     const deserializedID = Number((req.user as User)?.id);
-    console.log(formID, deserializedID);
     const notBothAreFalsy = Boolean(formID || deserializedID);
     if((formID != deserializedID) && notBothAreFalsy) throw new UnauthorizedError();
     next();
