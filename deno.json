@@ -29,5 +29,13 @@
       "deno.ns",
       "dom"
     ]
+  },
+  "deploy": {
+    "project": "6183c31f-e9f6-4d8a-a51e-5c37fc519c8e",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [],
+    "entrypoint": "main.ts"
   }
 }
