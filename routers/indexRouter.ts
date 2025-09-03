@@ -8,6 +8,7 @@ import newMessageRouter from "./newMessageRouter.ts";
 import expressAsyncHandler from "express-async-handler";
 import becomeAdminRouter from "./becomeAdminRouter.ts";
 import deleteMessageRouter from "./deleteMessageRouter.ts";
+import trigger404 from "../handlers/forErrors/trigger404.ts";
 
 const indexRouter = Router();
 
@@ -18,6 +19,7 @@ indexRouter.use("/login", loginRouter);
 indexRouter.use("/new-message", newMessageRouter);
 indexRouter.use("/become-admin", becomeAdminRouter);
 indexRouter.use("/delete-message", deleteMessageRouter);
+indexRouter.use("/:anything", trigger404);
 indexRouter.use(renderError);
 
 export default indexRouter;
